@@ -1,0 +1,9 @@
+pdfkit
+scrapy-pipelines
+requests
+httpx
+aiohttp
+scrapy-middlewares
+scrapy
+json
+beautifulsoup4

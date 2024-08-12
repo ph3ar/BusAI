@@ -1,0 +1,266 @@
+2023-12-21 12:46:59 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: samba_manuals)
+2023-12-21 12:46:59 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.6 (main, Oct  2 2023, 13:45:54) [Clang 15.0.0 (clang-1500.0.40.1)], pyOpenSSL 23.3.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform macOS-14.3-arm64-arm-64bit
+2023-12-21 12:46:59 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-12-21 12:46:59 [py.warnings] WARNING: /opt/homebrew/lib/python3.11/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-12-21 12:46:59 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-12-21 12:46:59 [scrapy.extensions.telnet] INFO: Telnet Password: e2eea3f4513b7ebe
+2023-12-21 12:46:59 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-12-21 12:46:59 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'samba_manuals',
+ 'CONCURRENT_REQUESTS': 32,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 16,
+ 'CONCURRENT_REQUESTS_PER_IP': 16,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'LOG_FILE': 'logs.txt',
+ 'NEWSPIDER_MODULE': 'samba_manuals.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['samba_manuals.spiders']}
+2023-12-21 12:46:59 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'samba_manuals.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-12-21 12:46:59 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'samba_manuals.middlewares.SambaManualsSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-12-21 12:46:59 [scrapy.middleware] INFO: Enabled item pipelines:
+['samba_manuals.pipelines.SambaManualsPipeline']
+2023-12-21 12:46:59 [scrapy.core.engine] INFO: Spider opened
+2023-12-21 12:46:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-12-21 12:46:59 [samba_manuals] INFO: Spider opened: samba_manuals
+2023-12-21 12:46:59 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6030
+2023-12-21 12:46:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thesamba.com/robots.txt> (referer: None)
+2023-12-21 12:46:59 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://www.thesamba.com/vw/forum/login.php>
+2023-12-21 12:47:00 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-12-21 12:47:00 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 306,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 540,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 0.528949,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 12, 21, 18, 47, 0, 159796, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 898,
+ 'httpcompression/response_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 85278720,
+ 'memusage/startup': 85278720,
+ 'response_received_count': 1,
+ 'robotstxt/forbidden': 1,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 12, 21, 18, 46, 59, 630847, tzinfo=datetime.timezone.utc)}
+2023-12-21 12:47:00 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-12-21 12:47:11 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: samba_manuals)
+2023-12-21 12:47:11 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.6 (main, Oct  2 2023, 13:45:54) [Clang 15.0.0 (clang-1500.0.40.1)], pyOpenSSL 23.3.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform macOS-14.3-arm64-arm-64bit
+2023-12-21 12:47:11 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-12-21 12:47:11 [py.warnings] WARNING: /opt/homebrew/lib/python3.11/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-12-21 12:47:11 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-12-21 12:47:11 [scrapy.extensions.telnet] INFO: Telnet Password: ff43d6e9d33b4449
+2023-12-21 12:47:11 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-12-21 12:47:11 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'samba_manuals',
+ 'CONCURRENT_REQUESTS': 32,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 16,
+ 'CONCURRENT_REQUESTS_PER_IP': 16,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'LOG_FILE': 'logs.txt',
+ 'NEWSPIDER_MODULE': 'samba_manuals.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['samba_manuals.spiders']}
+2023-12-21 12:47:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'samba_manuals.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-12-21 12:47:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'samba_manuals.middlewares.SambaManualsSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-12-21 12:47:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['samba_manuals.pipelines.SambaManualsPipeline']
+2023-12-21 12:47:11 [scrapy.core.engine] INFO: Spider opened
+2023-12-21 12:47:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-12-21 12:47:11 [samba_manuals] INFO: Spider opened: samba_manuals
+2023-12-21 12:47:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6030
+2023-12-21 12:47:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thesamba.com/robots.txt> (referer: None)
+2023-12-21 12:47:11 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://www.thesamba.com/vw/forum/login.php>
+2023-12-21 12:47:11 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-12-21 12:47:11 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 306,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 542,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 0.368721,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 12, 21, 18, 47, 11, 595766, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 898,
+ 'httpcompression/response_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 84672512,
+ 'memusage/startup': 84672512,
+ 'response_received_count': 1,
+ 'robotstxt/forbidden': 1,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 12, 21, 18, 47, 11, 227045, tzinfo=datetime.timezone.utc)}
+2023-12-21 12:47:11 [scrapy.core.engine] INFO: Spider closed (finished)
+2023-12-21 12:48:06 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: samba_manuals)
+2023-12-21 12:48:06 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.6 (main, Oct  2 2023, 13:45:54) [Clang 15.0.0 (clang-1500.0.40.1)], pyOpenSSL 23.3.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform macOS-14.3-arm64-arm-64bit
+2023-12-21 12:48:15 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: samba_manuals)
+2023-12-21 12:48:15 [scrapy.utils.log] INFO: Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.2, Twisted 22.10.0, Python 3.11.6 (main, Oct  2 2023, 13:45:54) [Clang 15.0.0 (clang-1500.0.40.1)], pyOpenSSL 23.3.0 (OpenSSL 3.1.4 24 Oct 2023), cryptography 41.0.7, Platform macOS-14.3-arm64-arm-64bit
+2023-12-21 12:48:15 [scrapy.addons] INFO: Enabled addons:
+[]
+2023-12-21 12:48:15 [py.warnings] WARNING: /opt/homebrew/lib/python3.11/site-packages/scrapy/utils/request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-12-21 12:48:15 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-12-21 12:48:15 [scrapy.extensions.telnet] INFO: Telnet Password: 2025e66d2486ff8f
+2023-12-21 12:48:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-12-21 12:48:15 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'samba_manuals',
+ 'CONCURRENT_REQUESTS': 32,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 16,
+ 'CONCURRENT_REQUESTS_PER_IP': 16,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'LOG_FILE': 'logs.txt',
+ 'NEWSPIDER_MODULE': 'samba_manuals.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['samba_manuals.spiders']}
+2023-12-21 12:48:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'samba_manuals.middlewares.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-12-21 12:48:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'samba_manuals.middlewares.SambaManualsSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-12-21 12:48:15 [scrapy.middleware] INFO: Enabled item pipelines:
+['samba_manuals.pipelines.SambaManualsPipeline']
+2023-12-21 12:48:15 [scrapy.core.engine] INFO: Spider opened
+2023-12-21 12:48:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-12-21 12:48:15 [samba_manuals] INFO: Spider opened: samba_manuals
+2023-12-21 12:48:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6030
+2023-12-21 12:48:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.thesamba.com/robots.txt> (referer: None)
+2023-12-21 12:48:16 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://www.thesamba.com/vw/forum/login.php>
+2023-12-21 12:48:16 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-12-21 12:48:16 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 1,
+ 'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+ 'downloader/request_bytes': 306,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 543,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 0.465758,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 12, 21, 18, 48, 16, 289943, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 898,
+ 'httpcompression/response_count': 1,
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'memusage/max': 86949888,
+ 'memusage/startup': 86949888,
+ 'response_received_count': 1,
+ 'robotstxt/forbidden': 1,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 12, 21, 18, 48, 15, 824185, tzinfo=datetime.timezone.utc)}
+2023-12-21 12:48:16 [scrapy.core.engine] INFO: Spider closed (finished)
